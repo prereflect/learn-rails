@@ -1,11 +1,11 @@
-<% content_for :title do %>Contact<% end %>
+<% content_for :title do %>Toby Learns Rails : Contact<% end %>
 <h3>Contact</h3>
 <div class="form">
   <%= simple_form_for @contact do |form| %>
     <%= form.error_notification %>
-    <%= form.input :name, autofocus: true %>
-    <%= form.input :email %>
-    <%= form.input :content, as: :text %>
+    <%= form.input :name, autofocus: true, label: false,  :placeholder => 'Your name...'  %>
+    <%= form.input :email, label: false, :placeholder => 'Your email address...' %>
+    <%= form.input :content, as: :text, label: false,  :placeholder => 'What do you want to tell me?' %>
     <%= form.button :submit, 'Submit', class: 'submit' %>
   <% end %>
 </div>
